@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "YouDefineTube",
+    "version": "1.0",
+    "description": "Customize YouTube homepage to focus on specific learning topics.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+
+    "action": {
+      "default_popup": "popup.html"
+
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
